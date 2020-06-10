@@ -1,0 +1,30 @@
+extend ../layout 
+
+block content
+    a.btn(role='button' href='/figuras') Volver
+
+
+    br
+    br
+    br
+
+    h1 Actualizando Figuras
+
+    br
+    br
+
+    form(action=`/figuras/${fig.id}/update` method='post')
+        label(for='id') ID:
+        input#id(type='text' name='id' value=fig.id)
+        br
+        label(for='marca') Marca:
+        input#marca(type='text' name='marca' value=fig.marca)
+        br
+        label(for='color') Color:
+        input#color(type='text' name='color' value=fig.color)
+        br
+        label(for='precio') Precio:
+        input#precio(type='text' name='precio' value=fig.precio)
+        br
+        br
+        input.btn(type='submit' value='OK') 

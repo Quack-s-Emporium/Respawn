@@ -1,0 +1,30 @@
+extend ../layout 
+
+block content
+    a.btn(role='button' href='/figuras') Volver
+
+
+    br
+    br
+    br
+
+    h1 Nueva Figura
+
+    br
+    br
+
+    form(action='/figuras/create' method='post')
+        label(for='id') ID:
+        input#id(type='text' name='id')
+        br
+        label(for='marca') Marca:
+        input#marca(type='text' name='marca')
+        br
+        label(for='color') Color:
+        input#color(type='text' name='color')
+        br
+        label(for='precio') Precio:
+        input#precio(type='text' name='precio')
+        br
+        br
+        input.btn(type='submit' value='OK') 
