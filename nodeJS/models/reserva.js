@@ -9,7 +9,7 @@ var reservaSchema = new Schema({
     usuario: { type: mongoose.Schema.Types.ObjectId, ref:'Usuario'},
 })
 
-reservaSchema.method.diasDeReserva = function() {
+reservaSchema.methods.diasDeReserva = function() {
     return moment(this.hasta).diff(moment(this.desde), 'days') + 1;
 }
 
